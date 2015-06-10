@@ -19,6 +19,8 @@ RUN wget -q https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR_VERSION
 
 ADD create_tomcat_admin_user.sh /create_tomcat_admin_user.sh
 ADD run.sh /run.sh
+ADD catalina-setenv.sh /tomcat/bin/setenv.sh
+
 RUN chmod +x /*.sh
 
 EXPOSE 8080
